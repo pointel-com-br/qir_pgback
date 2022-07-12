@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  qcode_ser_qif_pgback:
+    tty: true
+    stdin_open: true
+    container_name: qcode_con_qif_pgback
+    image: pointeldevs/run_data
+    volumes:
+      - ${QIN_ROOT}/Work:/root
+      - ${QIN_ROOT}/Code:/root/Code
+      - ${QIF_PGBACKED}:/root/pgbacked
+    environment:
+      - QIN_ROOT=/root
+      - QIF_PGBACKED=/root/pgbacked
+    networks:
+      - qin_net_stk
+    working_dir: /root/Code/qif_pgback
+
+networks:
+  qin_net_stk:
+    external: true
