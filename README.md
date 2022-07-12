@@ -1,3 +1,3 @@
-# PosBack
+# PGBack
 
-PosBack is a collection of command scripts to backup and restore Postgres databases and globals.
+PGBack is a collection of command scripts to backup and restore Postgres databases and globals.
