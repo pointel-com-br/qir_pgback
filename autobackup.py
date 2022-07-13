@@ -13,10 +13,10 @@ def backup_periodically():
 
 
 if __name__ == "__main__":
-    minutes_passed = 0
+    minutes_passed = 300
     while True:
         now_str = datetime.now().strftime("%Y-%m-%d %H-%M")
-        if minutes_passed > 300:
+        if minutes_passed >= 300:
             minutes_passed = 0
             print(now_str + 
                 " - Have passed five hours so we must to do the periodically backup.")
