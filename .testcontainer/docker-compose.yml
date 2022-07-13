@@ -13,9 +13,9 @@ services:
       - QIN_ROOT=/root
       - QIF_PGBACKED=/root/pgbacked
     networks:
-      - qin_net_run
+      - qin_net_stk
     working_dir: /root/Code/qif_pgback
 
 networks:
-  qin_net_run:
+  qin_net_stk:
     external: true
