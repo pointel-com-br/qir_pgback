@@ -2,7 +2,7 @@ import os
 
 
 def get_data_folder(group_to):
-    dir_path = os.environ['QIF_PGBACKED'] + '/data/' + group_to;
+    dir_path = os.environ['QIF_PGBACK_DATA'] + '/data/' + group_to;
     os.makedirs(dir_path, exist_ok=True)
     return dir_path
 

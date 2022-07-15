@@ -8,13 +8,15 @@ services:
     volumes:
       - ${QIN_ROOT}/Work:/root
       - ${QIN_ROOT}/Code:/root/Code
-      - ${QIF_PGBACKED}:/root/pgbacked
+      - ${QIF_PGBACK_DATA}:/root/pgbacked
     environment:
       - QIN_ROOT=/root
-      - QIF_PGBACKED=/root/pgbacked
+      - QIF_PGBACK_DATA=/root/pgbacked
+    restart: always
     networks:
       - qin_net_run
     working_dir: /root/Code/qif_pgback
+    entrypoint: ./entry.sh
 
 networks:
   qin_net_run:
