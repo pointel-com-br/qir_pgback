@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 $QIF_PGBACK_ENTRY
+python3 $QIR_PGBACK_ENTRY

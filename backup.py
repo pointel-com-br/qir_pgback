@@ -119,13 +119,13 @@ def backup_globals_and_databases(backup: Backup):
 
 if __name__ == "__main__":
     print("Backup Globals and Databases")
-    host = os.environ['QIF_PGBACK_HOST']
+    host = os.environ['QIR_PGBACK_HOST']
     if not host :
         host = input("Host: ")
-    week = os.environ['QIF_PGBACK_WEEK']
+    week = os.environ['QIR_PGBACK_WEEK']
     if not week:
         week = input("Week: ")
-    group = os.environ['QIF_PGBACK_GROUP']
+    group = os.environ['QIR_PGBACK_GROUP']
     if not group:
         group = input("Group: ")
     backup_globals_and_databases(Backup(host, week, group))

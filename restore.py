@@ -69,13 +69,13 @@ def restore_globals_and_databases(restore: Restore):
 
 if __name__ == "__main__":
     print("Restore Globals and Databases")
-    host = os.getenv("QIF_PGBACK_HOST", "")
+    host = os.getenv("QIR_PGBACK_HOST", "")
     if not host :
         host = input("Host: ")
-    week = os.getenv("QIF_PGBACK_WEEK", "")
+    week = os.getenv("QIR_PGBACK_WEEK", "")
     if not week:
         week = input("Week: ")
-    group = os.getenv("QIF_PGBACK_GROUP", "")
+    group = os.getenv("QIR_PGBACK_GROUP", "")
     if not group:
         group = input("Group: ")
     restore = Restore(host, week, group)

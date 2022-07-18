@@ -1,21 +1,21 @@
 version: "3.9"
 services:
-  qtest_ser_qif_pgback:
+  qtest_ser_qir_pgback:
     tty: true
     stdin_open: true
-    container_name: qtest_con_qif_pgback
+    container_name: qtest_con_qir_pgback
     image: pointeldevs/run_data
     volumes:
       - ${QIN_ROOT}/Work:/root
       - ${QIN_ROOT}/Code:/root/Code
-      - ${QIF_PGBACK_DATA}:/root/pgbacked
+      - ${QIR_PGBACK_DATA}:/root/pgbacked
     environment:
       - QIN_ROOT=/root
-      - QIF_PGBACK_DATA=/root/pgbacked
-      - QIF_PGBACK_ENTRY=${QIF_PGBACK_ENTRY}
+      - QIR_PGBACK_DATA=/root/pgbacked
+      - QIR_PGBACK_ENTRY=${QIR_PGBACK_ENTRY}
     networks:
       - qin_net_stk
-    working_dir: /root/Code/qif_pgback
+    working_dir: /root/Code/qir_pgback
     entrypoint: ./entry.sh
 
 networks:
