@@ -1,4 +1,5 @@
 import http.client as httplib
+import os
 import time
 from datetime import datetime
 
@@ -31,6 +32,9 @@ def backup_emergency():
 
 
 if __name__ == "__main__":
+    env_host = os.getenv("QIR_PGBACK_HOST", "")
+    if env_host:
+        backup_of_host = env_host
     minutes_passed = 60
     while True:
         now_str = datetime.now().strftime("%Y-%m-%d %H-%M")
