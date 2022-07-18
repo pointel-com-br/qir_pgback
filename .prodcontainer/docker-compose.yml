@@ -13,6 +13,7 @@ services:
       - QIN_ROOT=/root
       - QIR_PGBACK_DATA=/root/pgbacked
       - QIR_PGBACK_ENTRY=${QIR_PGBACK_ENTRY}
+      - QIR_PGBACK_HOST=qcon_run_postgres
     restart: always
     networks:
       - qin_net_run
