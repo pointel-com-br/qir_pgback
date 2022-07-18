@@ -12,6 +12,7 @@ services:
     environment:
       - QIN_ROOT=/root
       - QIR_PGBACK_DATA=/root/pgbacked
+      - QIR_PGBACK_ENTRY=${QIR_PGBACK_ENTRY}
     restart: always
     networks:
       - qin_net_run
