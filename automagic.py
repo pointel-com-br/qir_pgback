@@ -4,7 +4,7 @@ from datetime import datetime
 
 import backup
 
-backup_of_host = "pointel.pointto.us"
+backup_of_host = "localhost"
 
 
 def has_internet() -> bool:
