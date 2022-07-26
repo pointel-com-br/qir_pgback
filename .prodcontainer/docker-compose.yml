@@ -3,7 +3,7 @@ services:
   qprod_ser_qir_pgback:
     tty: true
     stdin_open: true
-    container_name: qprod_con_qir_pgback
+    container_name: qprod_qir_pgback
     image: pointeldevs/run_data
     volumes:
       - ${QIN_ROOT}/Work:/root
