@@ -124,7 +124,7 @@ if __name__ == "__main__":
         host = input("Host: ")
     week = os.getenv("QIR_PGBACK_WEEK", "")
     if not week:
-        week = input("Week:  (Monday == 0 ... Sunday == 6)")
+        week = input("Week: (Monday == 0 ... Sunday == 6)")
     group = os.getenv("QIR_PGBACK_GROUP", "")
     if not group:
         group = input("Group: (periodically | emergency)")
