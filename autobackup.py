@@ -10,7 +10,7 @@ backup_of_host = "pointel.pointto.us"
 def backup_periodically():
     backup.backup_globals_and_databases(backup.Backup(
         target_backup_host=backup_of_host,
-        data_group_to="periodically"))
+        target_data_group="periodically"))
 
 
 if __name__ == "__main__":

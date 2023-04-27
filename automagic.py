@@ -22,13 +22,13 @@ def has_internet() -> bool:
 def backup_periodically():
     backup.backup_globals_and_databases(backup.Backup(
         target_backup_host=backup_of_host,
-        data_group_to="periodically"))
+        target_data_group="periodically"))
 
 
 def backup_emergency():
     backup.backup_globals_and_databases(backup.Backup(
         target_backup_host=backup_of_host,
-        data_group_to="emergency"))
+        target_data_group="emergency"))
 
 
 if __name__ == "__main__":
@@ -40,13 +40,16 @@ if __name__ == "__main__":
         now_str = datetime.now().strftime("%Y-%m-%d %H-%M")
         if minutes_passed >= 60:
             minutes_passed = 0
-            print(now_str + " - Have passed one hour so we must to do the periodically backup.")
+            print(
+                now_str + " - Have passed one hour so we must to do the periodically backup.")
             backup_periodically()
-            
+
         if has_internet():
-            print(now_str + " - We have internet so we don't need to do the emergency backup.")
+            print(
+                now_str + " - We have internet so we don't need to do the emergency backup.")
         else:
-            print(now_str + " - We don't have internet so we need to do the emergency backup.")
+            print(
+                now_str + " - We don't have internet so we need to do the emergency backup.")
             backup_emergency()
             time.sleep(180)
             minutes_passed += 3
