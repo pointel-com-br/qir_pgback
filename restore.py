@@ -9,7 +9,6 @@ class Restore:
     origin_data_group = "periodically"
     origin_backup_week = "(now::week)"
     target_restore_host = "localhost"
-    
 
     def __init__(self,
                  origin_data_group: str = "",
@@ -21,7 +20,6 @@ class Restore:
             self.origin_backup_week = origin_backup_week
         if target_restore_host:
             self.target_restore_host = target_restore_host
-        
 
     def get_target_week(self) -> str:
         if self.origin_backup_week == "(now::week)":
@@ -72,8 +70,8 @@ def restore_globals_and_databases(restore: Restore):
 if __name__ == "__main__":
     print("Restore Globals and Databases")
     host = input("Host: ")
-    week = input("Week: (Monday == 0 ... Sunday == 6)")
-    group = input("Group: (periodically | emergency)")
+    week = input("Week (Monday == 0 ... Sunday == 6) :")
+    group = input("Group (periodically | emergency) :")
     restore = Restore(group, week, host)
     confirm = input(
         "Do you wanna restore the globals and all databases?\n" +
