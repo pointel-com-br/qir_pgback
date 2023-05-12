@@ -69,9 +69,9 @@ def restore_globals_and_databases(restore: Restore):
 
 if __name__ == "__main__":
     print("Restore Globals and Databases")
-    host = input("Host: ")
-    week = input("Week (Monday == 0 ... Sunday == 6) :")
-    group = input("Group (periodically | emergency) :")
+    host = input("Host [localhost] : ")
+    week = input("Week [now::week] (Monday == 0 ... Sunday == 6) : ")
+    group = input("Group [periodically] (periodically | emergency) : ")
     restore = Restore(group, week, host)
     confirm = input(
         "Do you wanna restore the globals and all databases?\n" +

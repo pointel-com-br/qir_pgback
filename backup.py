@@ -119,13 +119,9 @@ def backup_globals_and_databases(backup: Backup):
 
 if __name__ == "__main__":
     print("Backup Globals and Databases")
-    host = os.getenv("QIR_PGBACK_HOST", "")
-    if not host:
-        host = input("Host: ")
-    week = os.getenv("QIR_PGBACK_WEEK", "")
-    if not week:
-        week = input("Week (Monday == 0 ... Sunday == 6) : ")
-    group = os.getenv("QIR_PGBACK_GROUP", "")
+    host = input("Host [localhost] : ")
+    week = input("Week [now::week] (Monday == 0 ... Sunday == 6) : ")
+    group = input("Group [periodically] (periodically | emergency) : ")
     if not group:
-        group = input("Group (periodically | emergency) : ")
+        group = input("Group [periodically] (periodically | emergency) : ")
     backup_globals_and_databases(Backup(host, week, group))
