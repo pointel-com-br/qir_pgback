@@ -1,3 +1,3 @@
 #!/bin/bash
-python3 $QIR_PGBACK_ENTRY
+py $QIR_PGBACK_ENTRY
 

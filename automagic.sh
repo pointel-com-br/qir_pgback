@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 automagic.py
+py automagic.py

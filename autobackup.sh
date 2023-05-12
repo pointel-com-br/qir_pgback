@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 autobackup.py
+py autobackup.py
