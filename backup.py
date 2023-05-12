@@ -122,6 +122,4 @@ if __name__ == "__main__":
     host = input("Host [localhost] : ")
     week = input("Week [now::week] (Monday == 0 ... Sunday == 6) : ")
     group = input("Group [periodically] (periodically | emergency) : ")
-    if not group:
-        group = input("Group [periodically] (periodically | emergency) : ")
     backup_globals_and_databases(Backup(host, week, group))
