@@ -1,0 +1,11 @@
+[Unit]
+Description=Starts the Autobackup of Pointel
+After=network.target
+After=syslog.target
+ 
+[Service]
+ExecStart=/home/pointel/autobackup-launch.sh
+Environment="QIR_PGBACK_DATA=/home/pointel/pgbacked"
+ 
+[Install]
+WantedBy=default.target
