@@ -25,5 +25,6 @@ if __name__ == "__main__":
             print(now_str +
                   " - Have passed five hours so we must to do the periodically backup.")
             backup_periodically()
+            print("Finished backup periodically.")
         time.sleep(60)
         minutes_passed += 1
